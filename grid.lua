@@ -21,7 +21,7 @@ local fontName = native.systemFont
 L.createTableData = function(entry, options)
     local params = {}
     for i, columns in ipairs(options.columnDataName) do
-        print("Column Data:", entry[options.columnDataName[i]])
+        --print("Column Data:", entry[options.columnDataName[i]])
         params[i] = entry[options.columnDataName[i]]
     end
 
@@ -177,7 +177,7 @@ L.DisplayGrid = function(table, options, listerner)
     end
 
     if options.showTitle == true then
-        print("Options TitleHeight:", options.titleHeight)
+        --print("Options TitleHeight:", options.titleHeight)
 
         local width = ((options.titleHeight or rowHeight) * .70)/2
         local closeCircleGrp = L.createCircle(width)
@@ -213,7 +213,7 @@ L.DisplayGrid = function(table, options, listerner)
             local userName = entry.userName
 
 
-            print("row:", i)
+            --print("row:", i)
 
             tableView:insertRow {  
                 rowHeight = (options.rowHeight or rowHeight),
